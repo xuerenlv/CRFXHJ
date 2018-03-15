@@ -1,0 +1,25 @@
+[crf]
+train = 1           #模型训练
+location_temple = "./example/seg/template"
+location_train  = "./example/seg/train.data"
+location_test   = ""
+location_model  = "./example/seg/model"
+
+
+# L1 OR L2
+algorithm = 0       # "(正则化CRF 或者 MIRA)", "select training algorithm"
+regu_param_l1 = "0.1"  # regularization param l1
+regu_param_l2 = "1.1"  # regularization param l2
+eta = "0.001"  # eta
+
+
+# MIRA
+#algorithm = 1       # "(正则化CRF 或者 MIRA)", "select training algorithm"
+#mira_shrinking_size = 20 #"INT", "set INT for number of iterations variable needs to be optimal before considered for shrinking. (default 20)"
+#mira_C = 4
+
+# common
+freq = 3            #"INT", "use features that occuer no less than INT(default 1)"
+cost_factor = "1.0" #"FLOAT", "set FLOAT for cost parameter(default 1.0)"
+maxiter = 100000    #"INT", "set INT for max iterations in LBFGS routine(default 10k)"
+thread = 10          #"INT", "在使用MIRA的时候是无效的"

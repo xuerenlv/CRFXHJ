@@ -1,0 +1,18 @@
+[crf]
+train = 0           #模型测试
+location_temple = "./example/seg/template"
+location_train  = ""
+location_test   = "./example/seg/test.data"
+location_test_result   = "./example/seg/test.data.result"
+location_model  = "./example/seg/model"
+freq = 3            #"INT", "use features that occuer no less than INT(default 1)"
+maxiter = 100000    #"INT", "set INT for max iterations in LBFGS routine(default 10k)" 
+cost_factor = "1.0" #"FLOAT", "set FLOAT for cost parameter(default 1.0)"
+eta = "0.0001"      #"FLOAT", "set FLOAT for termination criterion(default 0.0001)"
+algorithm = 0       # "(正则化CRF 或者 MIRA)", "select training algorithm"
+regu_param_l1 = "0.0"  # regularization param l1
+regu_param_l2 = "0.0"  # regularization param l2
+thread = 0          #"INT", "number of threads (default auto-detect)" 
+shrinking-size = 20 #"INT", "set INT for number of iterations variable needs to be optimal before considered for shrinking. (default 20)" 
+convert = 0         # 0, "convert text model to binary model"
+textmodel = 0       # 0, "build also text model file for debugging"
